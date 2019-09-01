@@ -1,0 +1,61 @@
+.TableCard {
+    border: 2px solid black;
+}
+.TableCard thead {
+    background-color: bisque;
+}
+.TableCard th {
+    width: 15%;
+    height: 4em;
+    border: 2px solid black;
+}
+.YourCard h2 {
+    margin-top: 1em;
+}
+.ImgCard {
+    width: 20%;
+    border: 1px solid black;
+}
+.Up {
+    width: 5%;
+    height: 1.5em;
+    text-align: center;
+    margin: 0 2% 0 2%;
+    background-color: green;
+    border: none;
+}
+.Down {
+    width: 5%;
+    height: 1.5em;
+    text-align: center;
+    margin: 0 2% 0 2%;
+    background-color: red;
+    border: none;
+}
+.Up {
+    padding: 0.3em 0 0 2%;
+    width: 9%;
+}
+.Up p {
+    font-size: 150%;
+    margin: -0.55em 0 0 -20%;
+}
+.Down {
+    padding: 0.3em 0 0 2%;
+    width: 9%;
+}
+.Down p {
+    font-size: 150%;
+    margin: -0.55em 0 0 -20%;
+}
+.View {
+    margin: 0 3% 0 0;
+    background-color: blue;
+    border: none;
+}
+.Delete {
+    margin: 0 0 0 0;
+    background-color:red;
+    border: none;
+}
+

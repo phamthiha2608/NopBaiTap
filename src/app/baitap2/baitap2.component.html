@@ -1,0 +1,20 @@
+<table>
+    <thead>
+      <tr>
+        <th scope="col">Hình</th>
+        <th scope="col">Họ và Tên</th>
+        <th scope="col">Ngày sinh</th>
+        <th scope="col">Giới tính</th>
+        <th scope="col">Điểm</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let a of TTSinhVien'>
+        <td><img src="{{a.photo}}" width="100px" height="auto" class="image"></td>
+        <td>{{a.fullName}}</td>
+        <td>{{a.birthday}}</td>
+        <td>{{a.gender}}</td>
+        <td>{{a.mark}}</td>
+      </tr>
+    </tbody>
+</table>

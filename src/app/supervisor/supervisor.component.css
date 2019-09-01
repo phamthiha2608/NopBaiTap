@@ -1,0 +1,83 @@
+.Menu {
+    background-color: black;
+    height: 40em;
+}
+.MyNavbar {
+    width: 100%;
+    background-color: black;
+}
+.MyButtonNavbar button {
+    margin-left: 90%;
+}
+.MyIcon {
+    text-align: center;
+    color: white;
+}
+.MyIcon img {
+    background-color: blueviolet;
+    border-radius: 21px;
+    width: 30%;
+}
+.MyIcon nav {
+    float: left;
+    font-size: 120%;
+}
+.MyIcon nav a {
+    text-align: left;
+    color: white;
+}
+.Detail {
+    height: 46em;
+}
+.Directional {
+    background: none;
+}
+.Directional a:hover {
+    text-decoration: none;
+}
+.Select {
+    width: 100%;
+    margin: -0.5em;
+}
+.CardHeader {
+    height: 2.9em;
+}
+.SelectType {
+    margin: -0.5em 2% 0 2%;
+    width: 12.5%;
+}
+.Search {
+    width: 35%;
+    margin: -2.35em 0 0 36%;
+    position: relative;
+}
+.Search input[type=text] {
+    border-radius: 100px;
+    padding-left: 17%;
+    border: 1px solid blue;
+    height: 2.4em;
+}
+.Search i {
+    position: absolute;
+    top: 0.75em;
+    color: blue;
+    padding-left: 5%;
+}
+.btn_addemployees {
+    margin: -4.2em 0 0 75%;
+}
+.Action p {
+    margin: 0 0 0.3em 0;
+    font-size: 120%;
+}
+.Action a {
+    margin: 0 10% 0 13%;
+    font-size: 120%;
+}
+.MyCardFooter {
+    height: 3em;
+}
+.MyCardFooter nav ul {
+    float: right;
+    margin: -3em 0 0 0;
+}
