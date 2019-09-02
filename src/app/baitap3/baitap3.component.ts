@@ -9,28 +9,28 @@ export class Baitap3Component implements OnInit {
   MyCard = [
     {
       "ID":"pd100",
-      "Img":"asus-x407ua-i5-8250u-4gb-16gb-1tb-win10-bv485t-thumb33397-2-600x600.jpg",
+      "Image":"l1.jpg",
       "Name":"Laptop",
       "Price":"30000",
       "Quality":1
     },
     {
       "ID":"pd101",
-      "Img":"vivo-y93-32gb-black-400x460.png",
+      "Image":"l2.jpg",
       "Name":"Mobile",
       "Price":"54000",
       "Quality":1
     },
     {
       "ID":"pd102",
-      "Img":"tải xuống.jpg",
+      "Image":"l3.jpg",
       "Name":"Television",
       "Price":"22000",
       "Quality":1
     },
     {
       "ID":"pd103",
-      "Img":"tai-nghe-chup-tai-sony-mdr-100aapyce-vang-600x600.jpg",
+      "Image":"l4.jpg",
       "Name":"Headphone",
       "Price":"1300",
       "Quality":1
@@ -41,22 +41,26 @@ export class Baitap3Component implements OnInit {
 
   ngOnInit() {
   }
-  Up (id) {
+
+  Increase (id) {
     for (let i = 0; i < this.MyCard.length; i++) {
-      if(this.MyCard[i].ID === id) {
+      if(this.MyCard[i].ID == id) {
         this.MyCard[i].Quality++;
       }
     }
   }
-  Down (id) {
+
+  Decrease (id) {
     for (let i = 0; i < this.MyCard.length; i++) {
-      if(this.MyCard[i].ID === id) {
+      if(this.MyCard[i].ID == id) {
         if(this.MyCard[i].Quality > 1) {
           this.MyCard[i].Quality--;
         }
       }
     }
   }
+
+ 
 
 }
 

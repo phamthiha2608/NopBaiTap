@@ -1,6 +1,6 @@
 <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item">
-      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">HàIT</a>
+      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">HaITC</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Home</a>
@@ -27,12 +27,22 @@
             </thead>
             <tbody>
               <tr *ngFor='let a of MyCard'>
-                <th scope="col">{{a.ID}}</th>
-                <th scope="col"><img src="assets\{{a.Img}}" class="ImgCard"></th>
-                <th scope="col">{{a.Name}}</th>
-                <th scope="col">{{a.Price}}</th>
-                <th scope="col">{{a.Quality}}<button type="button" class="btn btn-primary Up" (click) = 'Up(a.ID)'><p>+</p></button><button type="button" class="btn btn-primary Down" (click) = 'Down(a.ID)'><p>-</p></button></th>
-                <th scope="col"><button type="button" class="btn btn-primary View">View</button><button type="button" class="btn btn-primary Delete">Delete</button></th>
+                <td>{{a.ID}}</td>
+                <td><img src="assets\{{a.Image}}" class="ImgCard"></td>
+                <td>{{a.Name}}</td>
+                <td>{{a.Price}}</td>
+                <td>{{a.Quality}}
+                  <button type="button" class="btn btn-primary Increase" (click) = 'Increase(a.ID)'><p>+</p></button>
+                  <button type="button" class="btn btn-primary Decrease" (click) = 'Decrease(a.ID)'><p>-</p></button>
+                </td>
+                <td>
+                  <button type="button" class="btn btn-primary View">View</button>
+                  <button type="button" class="btn btn-primary Delete">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                  <td colspan="1">Total Price</td>
+                  <td colspan="5" class="right">508900</td>
               </tr>
             </tbody>
         </table>

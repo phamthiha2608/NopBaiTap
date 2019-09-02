@@ -1,22 +1,26 @@
 .TableCard {
-    border: 2px solid black;
+    border: 1px solid black;
 }
 .TableCard thead {
-    background-color: bisque;
+    background-color:plum;
 }
 .TableCard th {
     width: 15%;
     height: 4em;
-    border: 2px solid black;
+    border: 1px solid black;
+}
+.TableCard td {
+    height: 4em;
+    border: 1px solid black;
 }
 .YourCard h2 {
     margin-top: 1em;
 }
 .ImgCard {
-    width: 20%;
+    width: 50%;
     border: 1px solid black;
 }
-.Up {
+.Increase {
     width: 5%;
     height: 1.5em;
     text-align: center;
@@ -24,7 +28,7 @@
     background-color: green;
     border: none;
 }
-.Down {
+.Decrease {
     width: 5%;
     height: 1.5em;
     text-align: center;
@@ -32,19 +36,19 @@
     background-color: red;
     border: none;
 }
-.Up {
+.Increase {
     padding: 0.3em 0 0 2%;
     width: 9%;
 }
-.Up p {
+.Increase p {
     font-size: 150%;
     margin: -0.55em 0 0 -20%;
 }
-.Down {
+.Decrease {
     padding: 0.3em 0 0 2%;
     width: 9%;
 }
-.Down p {
+.Decrease p {
     font-size: 150%;
     margin: -0.55em 0 0 -20%;
 }
@@ -58,4 +62,3 @@
     background-color:red;
     border: none;
 }
-
