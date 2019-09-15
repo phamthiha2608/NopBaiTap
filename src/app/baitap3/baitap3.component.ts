@@ -11,28 +11,28 @@ export class Baitap3Component implements OnInit {
       "ID":"pd100",
       "Image":"l1.jpg",
       "Name":"Laptop",
-      "Price":"30000",
+      "Price":30000,
       "Quality":1
     },
     {
       "ID":"pd101",
       "Image":"l2.jpg",
       "Name":"Mobile",
-      "Price":"54000",
+      "Price":54000,
       "Quality":1
     },
     {
       "ID":"pd102",
       "Image":"l3.jpg",
       "Name":"Television",
-      "Price":"22000",
+      "Price":22000,
       "Quality":1
     },
     {
       "ID":"pd103",
       "Image":"l4.jpg",
       "Name":"Headphone",
-      "Price":"1300",
+      "Price":1300,
       "Quality":1
     }
   ]
@@ -60,7 +60,13 @@ export class Baitap3Component implements OnInit {
     }
   }
 
- 
+  TongTien () {
+    let s=0;
+    for (let i = 0; i < this.MyCard.length; i++) {
+      s=s+this.MyCard[i].Price*this.MyCard[i].Quality;
+    }
+    return s;
+  }
 
 }
 

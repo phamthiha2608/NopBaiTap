@@ -1,0 +1,36 @@
+.btn {
+    width: 3%;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+.Search {
+    padding-left: 15px;
+}
+.TableSV {
+    width: 100%;
+}
+.TableSV th, .TableSV td {
+    height: 3em;
+}
+.showSV {
+    margin: 3% 0 0 0;
+}
+.PaginationSV {
+    margin: -2em 0 0 25%;
+}
+.detail:hover {
+    font-size: 2em;
+}
+.delete:hover {
+    font-size: 2em;
+}
+.close {
+    width: 20%;
+    background-color: darkgray;
+    height: 1.6em;
+    border-radius: 10px;
+}
+.agree {
+    width: 20%;
+    border-radius: 10px;
+}

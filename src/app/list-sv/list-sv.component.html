@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Sinh vien</li>
+        </ol>
+    </nav>
+    <div class="card">
+        <div class="card-header">
+          <i class='fas fa-table'></i>&nbsp;Danh sách sinh viên
+        </div>
+        <div class="card-body">
+            <div class="Search row">
+                <input type="text" class="col-sm-2" placeholder="Search">
+                <button class="btn btn-primary"><i class='fas fa-search'></i></button>
+            </div>
+            <table class="TableSV table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">LastName</th>
+                    <th scope="col">FirstName</th>
+                    <th scope="col">EnrollDate</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor='let a of students'>
+                    <td>{{a.LastName}}</td>
+                    <td>{{a.FirstName}}</td>
+                    <td>{{a.EnrollDate}}</td>
+                    <td>
+                        <a [routerLink] = "['/listsv',a.ID]" class="detail"><i class='fas fa-info-circle'></i></a>
+                        <i class='fas fa-trash-alt delete' data-toggle="modal" data-target="#myModal" (click) = 'thongtin(a.ID, a.FirstName, a.LastName)'>
+                        </i>
+                    </td>
+                  </tr>
+                  <div class="modal" tabindex="-1" role="dialog" id="myModal">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                        <div class="modal-body">
+                            <p id = "thongbao"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary close" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary agree" id="agree" (click) = 'Xoa()'>Agree</button>
+                        </div>
+                        </div>
+                    </div>
+                  </div>
+                </tbody>
+            </table>
+            <p class="showSV">Showing 1 of 3</p>
+            <nav aria-label="Page navigation example" class="PaginationSV">
+              <ul class="pagination justify-content-center">
+                  <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+              </ul>
+            </nav>
+        </div>
+    </div>
+</body>
+</html>
+

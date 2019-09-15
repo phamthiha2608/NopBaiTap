@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+          List Product
+        </div>
+        <div class="card-body">
+            <form class="form-horizontal" action="/action_page.php">
+                <div class="form-group row">
+                    <label class="control-label col-sm-2" for="fil">Filter by:</label>
+                    <div class="col-sm-10">
+                        <input type="fil" class="form-inline" id="fil">
+                    </div>
+                </div>
+            </form>
+            <h3><b>Filter by:</b></h3><br>
+            <table>
+                <thead>
+                    <tr>
+                        <th><button class="btn btn-primary"(click) ='AnHien()'>Hien image</button></th>
+                        <th>Poduct</th>
+                        <th>Code</th>
+                        <th>Available</th>
+                        <th>Price</th>
+                        <th>5 Star Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let a of ListProduct'>
+                        <td><img src="assets\{{a.imageUrl}}" class="image" *ngIf='isShow'></td>
+                        <td>
+                            <a [routerLink]="['/products',a.productId]" >
+                                {{a.productName}}
+                            </a>
+                        </td>
+                        <td>{{a.productCode}}</td>
+                        <td>{{a.relessDate}}</td>
+                        <td>{{a.price}}</td>
+                        <td><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="card-footer">
+            <i class="fa fa-arrow-left"></i> Back
+        </div>
+    </div>
+</body>
+</html>

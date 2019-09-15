@@ -1,0 +1,17 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    }
+
+    td, th {
+    text-align: left;
+    padding: 8px;
+    border-top:1px solid #dddddd;
+    border-bottom:1px solid #dddddd;
+}
+.image {
+    width: 105px; 
+    height:70px;
+    padding-left: 22px;
+}
