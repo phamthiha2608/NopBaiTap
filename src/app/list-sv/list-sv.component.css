@@ -5,6 +5,8 @@
 }
 .Search {
     padding-left: 15px;
+    padding-bottom: 2%;
+    width: 130%;
 }
 .TableSV {
     width: 100%;
@@ -17,12 +19,6 @@
 }
 .PaginationSV {
     margin: -2em 0 0 25%;
-}
-.detail:hover {
-    font-size: 2em;
-}
-.delete:hover {
-    font-size: 2em;
 }
 .close {
     width: 20%;

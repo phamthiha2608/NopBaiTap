@@ -1,14 +1,25 @@
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-    }
+.Table{
+    border: 1px solid #dddddd;
+}
+.Tablethead {
+    background-color:plum;
+}
+.Table th {
+    width: 15%;
+    height: 4em;
+    border: 1px solid #dddddd;
+}
+.Tabletd {
+    height: 4em;
+    border: 1px solid #dddddd;
+}
+td, th {
+    text-align: center;   
+    vertical-align: 0px;
+}
+th {
+    padding: 10px;
 
-    td, th {
-    text-align: left;
-    padding: 8px;
-    border-top:1px solid #dddddd;
-    border-bottom:1px solid #dddddd;
 }
 .image {
     width: 105px; 

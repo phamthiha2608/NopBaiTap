@@ -37,8 +37,8 @@
                     <td>{{a.FirstName}}</td>
                     <td>{{a.EnrollDate}}</td>
                     <td>
-                        <a [routerLink] = "['/listsv',a.ID]" class="detail"><i class='fas fa-info-circle'></i></a>
-                        <i class='fas fa-trash-alt delete' data-toggle="modal" data-target="#myModal" (click) = 'thongtin(a.ID, a.FirstName, a.LastName)'>
+                        <a [routerLink] = "['/detail',a.ID]"><i class='fas fa-info-circle'></i></a>
+                        <i class='fas fa-trash-alt' data-toggle="modal" data-target="#myModal" (click) = 'thongtin(a.ID, a.FirstName, a.LastName)'>
                         </i>
                     </td>
                   </tr>

@@ -1,13 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import { parseLazyRoute } from '@angular/compiler/src/aot/lazy_routes';
 
 @Component({
-  selector: 'app-listproduct',
-  templateUrl: './listproduct.component.html',
-  styleUrls: ['./listproduct.component.css']
+  selector: 'app-product',
+  templateUrl: './product.component.html',
+  styleUrls: ['./product.component.css']
 })
-export class ListProductComponent implements OnInit {
-  title = ListProductComponent;
-  isShow = true;
+export class ProductComponent implements OnInit {
+  product:any;
+  id;
+  pageTitle = "";
   listproduct =
 [
     {
@@ -17,9 +20,8 @@ export class ListProductComponent implements OnInit {
         "releaseDate": "March 19, 2016",
         "description": "Leaf rake with 48-inch wooden handle.",
         "price": 19.95,
-        "amount":1,
         "starRating": 3.2,
-        "imageUrl": "h1.jpg"
+        "imageUrl": "leaf rake.jpg"
     },
     {
         "productId": 2,
@@ -28,9 +30,8 @@ export class ListProductComponent implements OnInit {
         "releaseDate": "March 18, 2016",
         "description": "15 gallon capacity rolling garden cart",
         "price": 32.99,
-        "amount":1,
         "starRating": 4.2,
-        "imageUrl": "h2.jpg"
+        "imageUrl": "Garden Cart.jpg"
     },
     {
         "productId": 5,
@@ -39,9 +40,8 @@ export class ListProductComponent implements OnInit {
         "releaseDate": "May 21, 2016",
         "description": "Curved claw steel hammer",
         "price": 8.9,
-        "amount":1,
         "starRating": 4.8,
-        "imageUrl": "h3.jpg"
+        "imageUrl": "Hammer.jpg"
     },
     {
         "productId": 8,
@@ -50,9 +50,8 @@ export class ListProductComponent implements OnInit {
         "releaseDate": "May 15, 2016",
         "description": "15-inch steel blade hand saw",
         "price": 11.55,
-        "amount":1,
         "starRating": 3.7,
-        "imageUrl": "h4.jpg"
+        "imageUrl": "Saw.jpg"
     },
     {
         "productId": 10,
@@ -61,17 +60,19 @@ export class ListProductComponent implements OnInit {
         "releaseDate": "October 15, 2015",
         "description": "Standard two-button video game controller",
         "price": 35.95,
-        "amount":1,
         "starRating": 4.6,
-        "imageUrl": "h5.jpg"
+        "imageUrl": "VGC.jpg"
     },
 ];
+constructor(private route:ActivatedRoute) { }
 
-  constructor() { }
+ngOnInit() {
+  this.route.paramMap.subscribe(para=>{
+    this.id=+para.get('productId');
+  });
+  this.product = this.listproduct.find(a=>a.productId===this.id);
+  this.pageTitle=this.product.productName;
+}
 
-  ngOnInit() {
-  }
-  AnHien() {
-    this.isShow = !this.isShow;
-  }
+
 }

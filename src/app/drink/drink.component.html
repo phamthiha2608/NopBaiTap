@@ -1,0 +1,29 @@
+<div class="card">
+        <div class="card-header">
+            BÁN HÀNG GIẢI KHÁT
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">&nbsp;</th>
+                        <th scope="col">TÊN HÀNG</th>
+                        <th scope="col">SỐ LƯỢNG</th>
+                        <th scope="col">ĐƠN GIÁ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor = 'let d of list'>
+                        <th scope="row"><input type="checkbox" class="form-check-input" id="exampleCheck1" [(ngModel)]="d.select" value="" [ngModelOptions]="{standalone: true}">{{d.name}}</th>
+                        <td><input type="number" class="form-control" [(ngModel)]="d.soluong" [ngModelOptions]="{standalone: true}"></td>
+                        <td>{{d.price}}</td>
+                        <td>${{ThanhTien(d.price,d.soluong)}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="card-footer">
+            <p>TỔNG TIỀN:  ${{TongTien()}} </p>
+        </div>
+    </div>
+    

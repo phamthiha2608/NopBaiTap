@@ -112,7 +112,7 @@ export class DetailSVComponent implements OnInit {
       Grade:'B'},
     {
       StudentID:2,
-      CourseID:1045,//
+      CourseID:1045,
       Grade:'B'},
     {
       StudentID:2,
@@ -163,7 +163,5 @@ export class DetailSVComponent implements OnInit {
     var Ed = document.getElementById("Enrolldate");
     Ed.innerText = this.Student.EnrollDate;
   }
-
 }  
 
-//thấy nó nằm trên 2 cái khác nhau không// thì thằng đó có học khối A thì in ra, không thì in làm quoái gì, mầy hiểu liên kêts khóa chính ovới khói ngoại không
