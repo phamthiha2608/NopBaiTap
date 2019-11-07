@@ -1,0 +1,55 @@
+<header>
+    <h2>My Guitar Shop</h2>
+    </header>
+    
+    <section>
+    <nav>
+        <div class="title">
+            <b>Links</b>
+        </div>
+        <a class="link" [routerLink]="['/cart']">View Cart</a><br>
+        <a class="link" href="#">Login/Register</a><br>
+        <a class="link" href="#">Home</a>
+        <div class="title">
+            <b>Categories</b>
+        </div>
+        <ul *ngFor='let c of categories'>
+                <a class="link" [routerLink]="['/guitar',c.id]">{{c.catename}}</a>
+        </ul>
+        <div class="title"><b>Temp Link</b></div>
+        <a class="link" href="#">Admin</a>
+    </nav>
+    
+    <article>
+        <h3 class="name">{{guitar.productname}}</h3>
+        <div class="row product">
+            <div class="col-3">
+                <img src="assets/images/{{guitar.image}}">
+            </div>
+            <div class="col-9">
+                <p class="text"><b>Price:</b>&nbsp; <span class="txt">${{guitar.price}}</span></p>
+                <p class="text"><b>Discount:</b>&nbsp; <span class="txt">{{discount}}%</span></p>
+                <p class="text"><b>Quantity:</b> &nbsp;
+                    <input type="number" min="1" style="width:5%" [(ngModel)]="array.Quanti" [ngModelOptions]="{standalone: true}"> &nbsp;
+                </p><p></p>
+                <span class="bt">
+                    <button type="button" class="btn btn-success" (click)="addToCart(guitar)">Add To Cart</button> &nbsp;
+                    <button type="button" class="btn btn-primary" [routerLink]="['/cart']">View Your Cart</button>
+                </span><p></p>
+                <p class="text"><b>Description</b></p>
+                <p>{{guitar.description}}</p>
+                <p class="text"><b>New Feature</b></p>
+                <div class="description">
+                    <ul *ngFor='let p of guitar.newfeature'>
+                        <li>{{p.text}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>                
+    </article>
+</section>
+    
+<footer>
+    <p>&copy; 2010 My Guitar Shop</p>
+</footer>
+

@@ -11,21 +11,21 @@ export class Baitap2Component implements OnInit {
       "fullName": 'Nguyễn Văn Tèo',
       "birthday": '20-01-1999',
       "gender": 'Nam',
-      "photo": 'assets/s1.jpg',
+      "photo": 'assets/img/s1.jpg',
       "mark": 8.5
     },
     {
       "fullName": 'Phan thị nở',
       "birthday": '20-12-1999',
       "gender": 'Nữ',
-      "photo":'assets/s2.jpg',
+      "photo":'assets/img/s2.jpg',
       "mark": 8.5
     },
     {
       "fullName": 'Nguyễn khá Bảnh',
       "birthday": '20-01-2000',
       "gender": 'Nam',
-      "photo":'assets/s3.jpg',
+      "photo":'assets/img/s3.jpg',
       "mark": 8.5
     },
   ]

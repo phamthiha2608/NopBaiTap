@@ -1,4 +1,3 @@
-<div class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">HAITC</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,6 +21,9 @@
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['/list-product']">ListProduct</a>
           </li>
+           <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/supervisor']">Supervisor</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['/list-stusent']">ListStudent</a>
           </li>
@@ -39,11 +41,20 @@
               </div>
             </div>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/http']">Film</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/sinhvien']">Student</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/home']">Guitar</a>
+          </li>
+          
         </ul>
       </div>
     </nav>
 <router-outlet></router-outlet>
-</div>
 
 
 

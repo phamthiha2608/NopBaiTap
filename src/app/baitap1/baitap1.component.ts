@@ -10,7 +10,7 @@ export class Baitap1Component implements OnInit {
     "fullName":'Nguyễn Văn Tèo',
     "birthday":'20-01-1999',
     "gender" :'Nam',
-    "photo" :'assets/s1.jpg',
+    "photo" :'assets/img/s1.jpg',
     "mark":8.5
   }
   constructor() { }

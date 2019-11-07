@@ -1,7 +1,26 @@
-.imgcart{
-    width: 50px;
-    height: 50px;
+
+
+.product img {
+    width: 100%;
 }
+
+.text {
+    margin-bottom:3px;
+    color:lightcoral;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.txt{
+    color: black;
+}
+.name {
+    color: chocolate;
+    margin-bottom: 15px;
+}
+.bt{
+    padding-top:5px;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
   }
@@ -49,6 +68,7 @@ body {
       height: auto;
     }
   }
+
   .link {
     color:rgb(30, 138, 210);
   }
@@ -56,6 +76,4 @@ body {
   .title {
     color:rgb(221, 66, 113);
   }
-  .text{
-    color: chocolate;
-  }
+  

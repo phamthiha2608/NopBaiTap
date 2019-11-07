@@ -1,57 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <div class="card">
-        <div class="card-header">
-         Your Cart
-        </div>
-        <div class="card-body">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>
-                            <button class="btn btn-primary">Hien Image</button>
-                        </th>
-                        <th>Name:</th>
-                        <th>Code:</th>
-                        <th>Description:</th>
-                        <th>Availability:</th>
-                        <th>Price:</th>
-                        <th>5 Star Rating:</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor='let product of product'>
-                        <td>
-                            <img src="assets/{{product.ImageURL}}">
-                        </td>
-                        <td>
-                            <a [routerLink] ="['/products',product.productName]"></a>
-                        </td>
-                    </tr>
-                </tbody>
-            <div class="col-lg-4">
-                Leaf Rake<br>
-                gdn-0011<br>
-                Leaf rake with 48-inch wooden<br>handle.<br>
-                March 19,2016}<br>
-                $19.95<br>
-                3.2
-            </div>
-            <div class="col-lg-6">
-                <img src="assets\h1.jpg">
-            </div>
-        </table>
-        </div>
-        <div class="card-footer">
-                <i class="fa fa-arrow-left"></i> Back
-        </div>
+<header>
+  <h2>My Guitar Shop</h2>
+</header>
+
+<section>
+  <nav>
+    <div class="title">
+        <b>Links</b>
     </div>
-</body>
-</html>
+    <a class="link" [routerLink]="['/cart']">View Cart</a><br>
+    <a class="link" href="#">Login/Register</a><br>
+    <a class="link" href="#">Home</a>
+    <div class="title">
+        <b>Categories</b>
+    </div>
+    <ul *ngFor='let c of categories'>
+            <a class="link" [routerLink]="['/guitar',c.Id]">{{c.catename}}</a>
+    </ul>
+    <div class="title"><b>Temp Link</b></div>
+    <a class="link" href="#">Admin</a>
+  </nav>
+  
+  <article>
+    <h3 class="text">Your Card</h3>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Image</th>
+            <th scope="col">Item</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = 'let c of items'>
+                <td><img class="imgcart" src="assets/images/{{c.image}}"></td>
+                <td>{{c.productname}}</td>
+                <td>{{c.price}}</td>
+                <td>
+                    <input type="number" min="1" style="width:10%" [(ngModel)]="c.soluong" [ngModelOptions]="{standalone: true}"> &nbsp;
+                </td>
+                <td>{{ThanhTien(c.price,c.soluong)}}</td>                
+            </tr>  
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Subtotal: {{TongTien()}} </td>
+                <td style="color: red;"></td>                
+            </tr>   
+            <tr>
+                <td></td>
+                <td></td>
+                <td colspan="2">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary uc" data-toggle="modal" data-target="#exampleModal">
+                  Update Card
+                </button>
+    
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Họ và Tên</label>
+                          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" [(ngModel)]="update.name" [ngModelOptions]="{standalone: true}">                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Email address</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" [(ngModel)]="update.email" [ngModelOptions]="{standalone: true}">                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Số điện thoại</label>
+                          <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" [(ngModel)]="update.number" [ngModelOptions]="{standalone: true}">                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)='Update()'>Save</button>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+              </td>               
+            </tr>         
+        </tbody>
+    </table>   
+    <p>Return to: <a [routerLink]="['/products']">Home</a></p>  
+    <p>Return to: <a [routerLink]="['/product']">Guitar</a></p>   
+    <p>Proceed to : <a [routerLink]="['/checkout']">Checkout</a></p> 
+  </article>
+</section>
+
+<footer>
+  <p>&copy; 2010 My Guitar Shop</p>
+</footer>

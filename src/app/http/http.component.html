@@ -1,0 +1,22 @@
+<div class="container">
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link active" [routerLink]="['/film']">Films</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">About</a>
+    </li>
+  </ul>
+  <div class="row">
+    <div class="col-4" *ngFor ='let f of listFilms'>
+        <div class="film">
+            <img src="assets/img/banner.jpg">
+            <div class="filmname">
+                <a [routerLink]="['/detailfilm', f.url]">{{f.title}}</a>
+            </div>
+            <h5>Artic:{{f.director}}</h5>
+            <h5>producer:{{f.producer}}</h5>
+        </div>
+    </div>
+  </div>
+</div>

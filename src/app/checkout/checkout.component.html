@@ -1,0 +1,42 @@
+
+<header>
+    <h2>My Guitar Shop</h2>
+    </header>
+    
+<section>
+    <nav>
+        <div class="title">
+            <b>Links</b>
+        </div>
+        <a class="link" [routerLink]="['/cart']">View Cart</a><br>
+        <a class="link" href="#">Login/Register</a><br>
+        <a class="link" href="#">Home</a>
+        <div class="title">
+            <b>Categories</b>
+        </div>
+        <ul *ngFor='let c of categories'>
+                <a class="link" [routerLink]="['/guitar',c.Id]">{{c.catename}}</a>
+        </ul>
+        <div class="title"><b>Temp Link</b></div>
+        <a class="link" href="#">Admin</a>
+    </nav>
+    
+    <article>
+        <div class="card">
+            <div class="row no-gutters">
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h3 class="text">Your Order</h3>
+                        <h6></h6>    
+                        <h6>Order date</h6>                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+    
+<footer>
+    <p>&copy; 2010 My Guitar Shop</p>
+</footer>
+
